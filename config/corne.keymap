@@ -82,8 +82,8 @@
 //                   | GUI |     | SPC |      | ENT |     | ALT |
             bindings = <
    &kp TILDE &kp EXCL  &kp AT    &kp HASH &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp STAR &kp PIPE &kp BSLH  &trans
-   &trans    &kp UNDER &kp MINUS &kp PLUS &kp EQUAL &trans      &trans    &kp LPAR  &kp RPAR &kp LBRC &kp RBRC  &kp GRAVE
-   &trans    &trans    &trans    &kp LT   &kp GT    &trans      &trans    &kp LBKT  &kp RBKT &kp FSLH &kp QMARK &trans
+   &trans    &kp UNDER &kp MINUS &kp PLUS &kp EQUAL &trans      &trans    &kp LPAR  &kp RPAR &kp LBKT &kp RBKT  &kp GRAVE
+   &trans    &trans    &trans    &kp LT   &kp GT    &trans      &trans    &kp LBRC  &kp RBRC &kp FSLH &kp QMARK &trans
                                  &trans   &trans    &trans      &trans    &trans    &trans
             >;
         };
