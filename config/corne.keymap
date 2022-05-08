@@ -69,9 +69,7 @@
             #binding-cells = <0>;
             tap-ms = <10>;
             wait-ms = <0>;
-            bindings
-                = <&macro_tap &kp MINUS>
-                , <&macro_tap &kp GT>;
+            bindings = <&kp MINUS &kp GT>;
         };
         clcl: clcl {
             label = "colon_colon";
@@ -79,9 +77,7 @@
             #binding-cells = <0>;
             tap-ms = <10>;
             wait-ms = <0>;
-            bindings
-                = <&macro_tap &kp COLON>
-                , <&macro_tap &kp COLON>;
+            bindings = <&kp COLON &kp COLON>;
         };
     };
 
