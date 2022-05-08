@@ -23,7 +23,7 @@
 
 / {
     behaviors {
-        hth: hold_tap_hold {
+        hthp: hold_tap_hold {
             compatible      = "zmk,behavior-hold-tap";
             label           = "homerow_mod";
             #binding-cells  = <2>;
@@ -31,6 +31,22 @@
             quick-tap-ms    = <200>;
             flavor          = "hold-preferred";
             bindings        = <&kp>, <&kp>;
+        };
+        lthp: layer_tap_hold_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            label      = "layer_tap_hold_preferred";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
+        };
+        lthpb: layer_tap_hold_preferred_balanced {
+            compatible = "zmk,behavior-hold-tap";
+            label      = "layer_tap_hold_preferred_balanced";
+            #binding-cells = <2>;
+            flavor = "hold-preferred,balanced";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
         };
         lhm: left_homerow_mod {
             compatible                 = "zmk,behavior-hold-tap";
@@ -90,10 +106,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |      |  N  |  M   |  ,  |  .  |  /  | ENT  |
 //                    | CMD | LWR | SPC |      | SPC | RSE  | ALT |
             bindings = <
-   &kp  TAB      &kp Q        &kp W       &kp E       &kp R         &kp T            &kp Y     &kp U         &kp I           &kp O         &kp P          &kp BSPC
-   &hth LCTL ESC &lhm LCTRL A &lhm LALT S &lhm LCMD D &lhm LSHFT F  &kp G            &kp H     &rhm RSHFT J  &rhm LCMD K     &rhm LALT L   &rhm LCTL SEMI &kp SQT
-   &kp  LSHFT    &kp Z        &kp X       &kp C       &kp V         &kp B            &kp N     &kp M         &kp COMMA       &kp DOT       &kp FSLH       &kp RET
-                                          &kp LCMD    &lt LWR DEL   &lt NAV SPACE    &kp SPACE &mo RSE       &mo FNC
+   &kp   TAB      &kp Q        &kp W       &kp E       &kp R         &kp T            &kp Y     &kp U         &kp I           &kp O         &kp P          &kp BSPC
+   &hthp LCTL ESC &lhm LCTRL A &lhm LALT S &lhm LCMD D &lhm LSHFT F  &kp G            &kp H     &rhm RSHFT J  &rhm LCMD K     &rhm LALT L   &rhm LCTL SEMI &kp SQT
+   &kp   LSHFT    &kp Z        &kp X       &kp C       &kp V         &kp B            &kp N     &kp M         &kp COMMA       &kp DOT       &kp FSLH       &kp RET
+                                           &kp LCMD    &lthp LWR DEL &lt NAV SPACE    &kp SPACE &mo RSE       &mo FNC
             >;
         };
         lower_layer {
