@@ -62,20 +62,13 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-        combo_caps_word {
-            timeout-ms = <50>;
-            key-positions = <15 20>;
-            bindings = <&caps_word>;
-        };
-    };
-
     macros {
         arrw: arrw {
             label = "cpp_arrow";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            tap-ms = <10>;
+            wait-ms = <0>;
             bindings
                 = <&macro_tap &kp MINUS>
                 , <&macro_tap &kp GT>;
@@ -84,6 +77,8 @@
             label = "colon_colon";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            tap-ms = <10>;
+            wait-ms = <0>;
             bindings
                 = <&macro_tap &kp COLON>
                 , <&macro_tap &kp COLON>;
@@ -115,10 +110,10 @@
         };
         raise_layer {
             bindings = <
-                &kp TILDE &kp EXCL  &kp AT    &kp HASH &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp STAR &kp PIPE &kp BSLH  &trans
-                &trans    &kp UNDER &kp MINUS &kp PLUS &kp EQUAL &none       &none     &kp LPAR  &kp RPAR &kp LBKT &kp RBKT  &kp GRAVE
-                &none     &none     &none     &kp LT   &kp GT    &none       &none     &kp LBRC  &kp RBRC &kp FSLH &kp QMARK &trans
-                                 &trans   &trans    &trans      &trans    &trans    &trans
+                &kp TILDE  &kp EXCL  &kp AT    &kp HASH &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp STAR &kp PIPE &kp BSLH  &trans
+                &trans     &kp UNDER &kp MINUS &kp PLUS &kp EQUAL &none       &none     &kp LPAR  &kp RPAR &kp LBKT &kp RBKT  &kp GRAVE
+                &caps_word &none     &none     &kp LT   &kp GT    &none       &none     &kp LBRC  &kp RBRC &kp FSLH &kp QMARK &trans
+                                     &trans   &trans    &trans      &trans    &trans    &trans
             >;
         };
         navi_layer {
