@@ -8,17 +8,17 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define DEFAULT 0
-#define LOWER   1
-#define RAISE   2
-#define NAVI    3
-#define FUNC    4
-#define NUMPAD  5
-#define ADJUST  6
+#define DEF 0
+#define LWR 1
+#define RSE 2
+#define NAV 3
+#define FNC 4
+#define NUM 5
+#define ADJ 6
 
 
 &caps_word {
-    continue-list = <UNDERSCORE MINUS>;
+    continue-list = <UNDERSCORE MINUS BSPC>;
 };
 
 / {
@@ -57,8 +57,8 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         adjust_layer {
-            if-layers = <LOWER RAISE>;
-            then-layer = <ADJUST>;
+            if-layers = <LWR RSE>;
+            then-layer = <ADJ>;
         };
     };
 
@@ -93,7 +93,7 @@
    &kp  TAB      &kp Q        &kp W       &kp E       &kp R         &kp T            &kp Y     &kp U         &kp I           &kp O         &kp P          &kp BSPC
    &hth LCTL ESC &lhm LCTRL A &lhm LALT S &lhm LCMD D &lhm LSHFT F  &kp G            &kp H     &rhm RSHFT J  &rhm LCMD K     &rhm LALT L   &rhm LCTL SEMI &kp SQT
    &kp  LSHFT    &kp Z        &kp X       &kp C       &kp V         &kp B            &kp N     &kp M         &kp COMMA       &kp DOT       &kp FSLH       &kp RET
-                                          &kp LCMD    &lt LOWER DEL &lt NAVI SPACE   &kp SPACE &mo RAISE     &mo FUNC
+                                          &kp LCMD    &lt LWR DEL   &lt NAV SPACE    &kp SPACE &mo RSE       &mo FNC
             >;
         };
         lower_layer {
@@ -112,7 +112,7 @@
                                      &trans   &trans    &trans      &trans    &trans    &trans
             >;
         };
-        navi_layer {
+        nav_layer {
             bindings = <
                 &none &none &none &none  &none  &none    &kp HOME &kp PG_DN &kp PG_UP &kp END   &none &none
                 &none &none &none &none  &none  &none    &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none &none
@@ -130,17 +130,17 @@
         };
         numpad_layer {
             bindings = <
-                &none       &none &none &none  &none  &none    &none     &kp N7    &kp N8    &kp N9    &kp EQUAL &none
-                &to DEFAULT &none &none &none  &none  &none    &kp FSLH  &kp N4    &kp N5    &kp N6    &kp MINUS &none
-                &none       &none &none &none  &none  &none    &kp STAR  &kp N1    &kp N2    &kp N3    &kp PLUS  &none
-                                        &trans &trans &trans   &kp SPACE &kp N0    &kp DOT
+                &none   &none &none &none  &none  &none    &none     &kp N7    &kp N8    &kp N9    &kp EQUAL &none
+                &to DEF &none &none &none  &none  &none    &kp FSLH  &kp N4    &kp N5    &kp N6    &kp MINUS &none
+                &none   &none &none &none  &none  &none    &kp STAR  &kp N1    &kp N2    &kp N3    &kp PLUS  &none
+                                    &trans &trans &trans   &kp SPACE &kp N0    &kp DOT
             >;
         };
         adjust_layer {
             bindings = <
                 &none &none &none &none  &none  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
-                &none &none &none &none  &none  &none    &none  &none  &none &none &none &none
-                &none &none &none &none  &none  &none    &none  &to NUMPAD  &none &none &none &none
+                &none &none &none &none  &none  &none    &none  &none    &none &none &none &none
+                &none &none &none &none  &none  &none    &none  &to NUM  &none &none &none &none
                                   &trans &trans &trans   &trans &trans &trans
             >;
         };
