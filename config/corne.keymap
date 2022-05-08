@@ -92,16 +92,22 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <10>;
-            wait-ms = <0>;
-            bindings = <&kp LCTL &kp LEFT>;
+            wait-ms = <10>;
+            bindings
+                = <&macro_press &kp LCTL>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LCTL>;
         };
         msr: msr {
             label = "move_space_right";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             tap-ms = <10>;
-            wait-ms = <0>;
-            bindings = <&kp LCTL &kp RIGHT>;
+            wait-ms = <10>;
+            bindings
+                = <&macro_press &kp LCTL>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LCTL>;
         };
     };
 
