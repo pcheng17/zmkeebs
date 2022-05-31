@@ -147,10 +147,10 @@
         };
         fn_layer {
             bindings = <
-                &none &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN    &none  &none     &none    &none    &none    &none
-                &none &kp F11 &kp F4 &kp F5 &kp F6 &none        &none  &kp RSHFT &kp LCMD &kp LALT &kp LCTL &none
-                &none &kp F10 &kp F1 &kp F2 &kp F3 &none        &none  &none     &none    &none    &none    &none
-                                     &trans &trans &trans       &trans &trans    &trans
+                &none &kp F12 &kp F7 &kp F8 &kp F9 &none     &none  &none     &none    &none    &none    &none
+                &none &kp F11 &kp F4 &kp F5 &kp F6 &none     &none  &kp RSHFT &kp LCMD &kp LALT &kp LCTL &none
+                &none &kp F10 &kp F1 &kp F2 &kp F3 &none     &none  &none     &none    &none    &none    &none
+                                     &trans &trans &trans    &trans &trans    &trans
             >;
         };
         numpad_layer {
