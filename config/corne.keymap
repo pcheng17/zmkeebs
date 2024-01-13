@@ -109,6 +109,71 @@
                 , <&macro_tap &kp RIGHT>
                 , <&macro_release &kp LCTL>;
         };
+        tmux: tmux {
+            label = "tmux";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <10>;
+            wait-ms = <10>;
+            bindings
+                = <&macro_press &kp LCTL>
+                , <&macro_tap &kp A>
+                , <&macro_release &kp LCTL>;
+        };
+        ss_sv: ss_sv {
+            label = "screenshot_save";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <10>;
+            wait-ms = <10>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LCMD>
+                , <&macro_tap &kp 4>
+                , <&macro_release &kp LCMD>
+                , <&macro_release &kp LSHFT>
+        };
+        ss_cp: ss_cp {
+            label = "screenshot_copy";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <10>;
+            wait-ms = <10>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LCMD>
+                , <&macro_press &kp LCTL>
+                , <&macro_tap &kp 4>
+                , <&macro_release &kp LCTL>
+                , <&macro_release &kp LCMD>
+                , <&macro_release &kp LSHFT>
+        };
+        ss_sv: ss_sv {
+            label = "screenshot_save";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <10>;
+            wait-ms = <10>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LCMD>
+                , <&macro_tap &kp 4>
+                , <&macro_release &kp LCMD>
+                , <&macro_release &kp LSHFT>
+        };
+        sc_rec: sc_rec {
+            label = "screen_record";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <10>;
+            wait-ms = <10>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_press &kp LCMD>
+                , <&macro_tap &kp 5>
+                , <&macro_release &kp LCMD>
+                , <&macro_release &kp LSHFT>
+        };
     };
 
     keymap {
@@ -118,39 +183,39 @@
                 &kp   TAB      &kp  Q       &kp  W      &kp  E      &kp  R        &kp T         &kp Y     &kp  U       &kp  I      &kp  O      &kp  P         &kp BSPC
                 &hthp LCTL ESC &lhm LCTRL A &lhm LALT S &lhm LCMD D &lhm LSHFT F  &kp G         &kp H     &rhm RSHFT J &rhm LCMD K &rhm LALT L &rhm LCTL SEMI &kp SQT
                 &kp   LSHFT    &kp  Z       &kp  X      &kp  C      &kp  V        &kp B         &kp N     &kp  M       &kp  COMMA  &kp  DOT    &kp  FSLH      &kp RET
-                                                        &kp LCMD    &lthp LWR DEL &lt NAV SPACE &kp SPACE &mo RSE      &mo  FNC
+                                                        &kp LCMD    &lthp LWR DEL &lt NAV SPACE &kp SPACE &mo RSE      &lt  FNC tmux
             >;
         };
         lower_layer {
             bindings = <
-                &trans &kp N1    &kp N2 &kp N3 &kp N4 &kp N5    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans
-                &trans &kp LANG1 &none  &none  &none  &none     &none  &arrw  &clcl  &none  &none  &none
-                &trans &none     &none  &none  &none  &none     &none  &none  &none  &none  &none  &trans
-                                        &trans &trans &trans    &trans &trans &trans
+                &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans  &trans  &trans     &trans  &trans  &trans
             >;
         };
         raise_layer {
             bindings = <
-                &kp TILDE  &kp EXCL  &kp AT    &kp HASH &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp STAR &kp PIPE &kp BSLH  &trans
-                &trans     &kp UNDER &kp MINUS &kp PLUS &kp EQUAL &none       &none     &kp LPAR  &kp RPAR &kp LBKT &kp RBKT  &kp GRAVE
-                &caps_word &none     &none     &kp LT   &kp GT    &none       &none     &kp LBRC  &kp RBRC &kp FSLH &kp QMARK &trans
-                                     &trans    &trans   &trans    &trans      &trans    &trans
+                &kp TILDE   &kp EXCL   &kp AT     &kp HASH  &kp DLLR   &kp PRCNT   &kp CARET  &kp AMPS  &kp STAR  &kp PIPE  &kp BSLH   &trans
+                &trans      &kp UNDER  &kp MINUS  &kp PLUS  &kp EQUAL  &none       &arrw      &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT   &kp GRAVE
+                &caps_word  &none      &none      &kp LT    &kp GT     &none       &clcl      &kp LBRC  &kp RBRC  &kp FSLH  &kp QMARK  &trans
+                                                  &trans    &trans     &trans      &trans     &trans    &trans
             >;
         };
         nav_layer {
             bindings = <
-                &none &none &none &none  &none  &none    &kp HOME &kp PG_DN &kp PG_UP &kp END   &none &none
-                &none &none &none &msl   &msr   &none    &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none &none
-                &none &none &none &none  &none  &none    &none    &none     &none     &none     &none &none
-                                  &trans &trans &trans   &trans   &trans    &trans
+                &none &none &none &ss_sv &ss_cp &sc_rec   &kp HOME &kp PG_DN &kp PG_UP &kp END   &none &none
+                &none &none &none &msl   &msr   &none     &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none &none
+                &none &none &none &none  &none  &none     &none    &none     &none     &none     &none &none
+                                  &trans &trans &trans    &trans   &trans    &trans
             >;
         };
         fn_layer {
             bindings = <
-                &none &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN    &none  &none     &none    &none    &none    &none
-                &none &kp F11 &kp F4 &kp F5 &kp F6 &none        &none  &kp RSHFT &kp LCMD &kp LALT &kp LCTL &none
-                &none &kp F10 &kp F1 &kp F2 &kp F3 &none        &none  &none     &none    &none    &none    &none
-                                     &trans &trans &trans       &trans &trans    &trans
+                &none &kp F12 &kp F7 &kp F8 &kp F9 &none        &none  &none  &none  &none &none &none
+                &none &kp F11 &kp F4 &kp F5 &kp F6 &none        &none  &none  &none  &none &none &none
+                &none &kp F10 &kp F1 &kp F2 &kp F3 &none        &none  &none  &none  &none &none &none
+                                     &trans &trans &trans       &trans &trans &trans
             >;
         };
         numpad_layer {
