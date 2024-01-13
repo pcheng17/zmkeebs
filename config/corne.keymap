@@ -153,19 +153,6 @@
                 , <&macro_release &kp LCMD>
                 , <&macro_release &kp LSHFT>;
         };
-        ss_sv: ss_sv {
-            label = "screenshot_save";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            tap-ms = <10>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_press &kp LCMD>
-                , <&macro_tap &kp 4>
-                , <&macro_release &kp LCMD>
-                , <&macro_release &kp LSHFT>;
-        };
         sc_rec: sc_rec {
             label = "screen_record";
             compatible = "zmk,behavior-macro";
