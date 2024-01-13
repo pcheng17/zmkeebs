@@ -136,7 +136,7 @@
                 , <&macro_press &kp LCMD>
                 , <&macro_tap &kp 4>
                 , <&macro_release &kp LCMD>
-                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LSHFT>;
         };
         ss_cp: ss_cp {
             label = "screenshot_copy";
@@ -151,7 +151,7 @@
                 , <&macro_tap &kp 4>
                 , <&macro_release &kp LCTL>
                 , <&macro_release &kp LCMD>
-                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LSHFT>;
         };
         ss_sv: ss_sv {
             label = "screenshot_save";
@@ -164,7 +164,7 @@
                 , <&macro_press &kp LCMD>
                 , <&macro_tap &kp 4>
                 , <&macro_release &kp LCMD>
-                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LSHFT>;
         };
         sc_rec: sc_rec {
             label = "screen_record";
@@ -177,7 +177,7 @@
                 , <&macro_press &kp LCMD>
                 , <&macro_tap &kp 5>
                 , <&macro_release &kp LCMD>
-                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LSHFT>;
         };
     };
 
