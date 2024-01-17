@@ -122,7 +122,7 @@
             wait-ms = <10>;
             bindings
                 = <&macro_press &kp LCTL>
-                , <&macro_tap &kp A>
+                , <&macro_tap &kp B>
                 , <&macro_release &kp LCTL>;
         };
         ss_sv: ss_sv {
