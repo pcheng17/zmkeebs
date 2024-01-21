@@ -21,6 +21,11 @@
     continue-list = <UNDERSCORE MINUS BSPC>;
 };
 
+&lt {
+    tapping-term-ms = <200>;
+    quick-tap-ms    = <200>;
+}
+
 / {
     behaviors {
         hthp: hold_tap_hold_preferred {
@@ -65,10 +70,6 @@
             hold-trigger-on-release;
             global-quick-tap;
         };
-        &lt {
-            tapping-term-ms = <200>;
-            quick-tap-ms    = <200>;
-        }
     };
 
     conditional_layers {
