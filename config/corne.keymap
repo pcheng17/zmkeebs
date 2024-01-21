@@ -127,7 +127,7 @@
             wait-ms = <10>;
             bindings
                 = <&macro_press &kp LCTL>
-                , <&macro_tap &kp B>
+                , <&macro_tap &kp SPACE>
                 , <&macro_release &kp LCTL>;
         };
         ss_sv: ss_sv {
@@ -186,7 +186,7 @@
         lower_layer {
             bindings = <
                 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-                &trans  &trans  &trans  &trans  &tmux   &trans     &trans  &arrw   &clcl   &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &tmux     &trans  &arrw   &clcl   &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans  &trans  &trans     &trans  &trans  &trans
             >;
