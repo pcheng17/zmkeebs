@@ -179,10 +179,10 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                &kp   TAB      &kp  Q       &kp  W      &kp  E      &kp  R        &kp T         &kp Y     &kp  U       &kp  I      &kp  O      &kp  P         &kp BSPC
-                &hthp LCTL ESC &lhm LCTRL A &lhm LALT S &lhm LCMD D &lhm LSHFT F  &kp G         &kp H     &rhm LSHFT J &rhm LCMD K &rhm LALT L &rhm LCTL SEMI &kp SQT
-                &kp   LSHFT    &kp  Z       &kp  X      &kp  C      &kp  V        &kp B         &kp N     &kp  M       &kp  COMMA  &kp  DOT    &kp  FSLH      &kp RET
-                                                        &kp LCMD    &lthp LWR DEL &lt NAV SPACE &kp SPACE &mo RSE      &mo  FNC
+                &kp   TAB      &kp  Q       &kp  W      &kp  E      &kp  R        &kp T         &kp Y     &kp  U            &kp  I      &kp  O      &kp  P         &kp BSPC
+                &hthp LCTL ESC &lhm LCTRL A &lhm LALT S &lhm LCMD D &lhm LSHFT F  &kp G         &kp H     &rhm LSHFT J      &rhm LCMD K &rhm LALT L &rhm LCTL SEMI &kp SQT
+                &kp   LSHFT    &kp  Z       &kp  X      &kp  C      &kp  V        &kp B         &kp N     &kp  M            &kp  COMMA  &kp  DOT    &kp  FSLH      &kp RET
+                                                        &kp LCMD    &lthp LWR DEL &lt NAV SPACE &kp SPACE &lthp RSE RET     &mo  FNC
             >;
         };
         lower_layer {
