@@ -33,7 +33,7 @@
             label           = "hold_tap_hold_preferred";
             #binding-cells  = <2>;
             flavor          = "hold-preferred";
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
             quick-tap-ms    = <200>;
             bindings        = <&kp>, <&kp>;
         };
@@ -42,7 +42,7 @@
             label           = "layer_tap_hold_preferred";
             #binding-cells  = <2>;
             flavor          = "hold-preferred";
-            tapping-term-ms = <180>;
+            tapping-term-ms = <120>;
             quick-tap-ms    = <200>;
             bindings        = <&mo>, <&kp>;
         };
