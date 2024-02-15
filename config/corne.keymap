@@ -11,10 +11,11 @@
 #define DEF 0
 #define LWR 1
 #define RSE 2
-#define NAV 3
-#define FNC 4
-#define NUM 5
-#define ADJ 6
+#define VAN 3 // Vanilla
+#define NAV 4
+#define FNC 5
+#define NUM 6
+#define ADJ 7
 
 
 &caps_word {
@@ -201,6 +202,14 @@
                                                   &trans    &trans     &trans      &trans     &trans    &trans
             >;
         };
+        vanilla_layer {
+            bindings = <
+                &kp TAB    &kp Q  &kp W  &kp E      &kp R         &kp T         &kp Y     &kp U          &kp I      &kp O    &kp P     &kp BSPC
+                &kp ESC    &kp A  &kp S  &kp D      &kp F         &kp G         &kp H     &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
+                &kp LSHFT  &kp Z  &kp X  &kp C      &kp V         &kp B         &kp N     &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp RET
+                                         &kp LCMD   &lthp LWR DEL &kp SPACE     &kp SPACE &lthp RSE RET  &mo  FNC
+                >;
+        };
         nav_layer {
             bindings = <
                 &none &none &none &ss_sv &ss_cp &sc_rec   &kp HOME &kp PG_DN &kp PG_UP &kp END   &none &none
@@ -228,8 +237,8 @@
         adjust_layer {
             bindings = <
                 &none &none &none &none  &none  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-                &none &none &none &none  &none  &none    &none  &none    &none &none &none &none
-                &none &none &none &none  &none  &none    &none  &to NUM  &none &none &none &none
+                &none &none &none &none  &none  &none    &none  &none    &none   &none &none &to DEF
+                &none &none &none &none  &none  &none    &none  &to NUM  &to VAN &none &none &none
                                   &trans &trans &trans   &trans &trans &trans
             >;
         };
