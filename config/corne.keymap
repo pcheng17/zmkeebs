@@ -186,7 +186,7 @@
                                                         &kp LCMD    &lthp LWR DEL &lt NAV SPACE &lt FNC SPACE &lthp RSE RET &kp  LCTL
             >;
         };
-        lower_layer
+        lower_layer {
             bindings = <
                 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &arrw   &clcl   &trans  &trans  &trans
